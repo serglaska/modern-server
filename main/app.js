@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const express = require('express');
 const rateLimit = require('express-rate-limit');
+const userRoute = require('./routers/user.routers');
 const { appConfigs } = require('./configs');
 require('dotenv').config();
 // /////////////////////////////////////////////////////////////////////////
@@ -28,6 +29,7 @@ if (process.env.ENV === 'dev') {
   app.use(morgan('dev'));
 }
 
+app.use('/', userRoute);
 app.listen(appConfigs.PORT, () => console.log(`Port was started on port  ${appConfigs.PORT}`));
 
 function _configureCORS(origin, callback) {

@@ -4,7 +4,7 @@
   "description": "Modern server with express, postgres, docker, sockets",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon main/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.4.1",
-    "helmet": "4.6.0"
+    "helmet": "4.6.0",
+    "pg": "^8.7.1"
   },
   "devDependencies": {
     "eslint": "^8.0.0",
